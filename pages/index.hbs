@@ -1,0 +1,20 @@
+{{>header}}
+
+		{{!-- intro --}}
+		{{#with banner}}
+			<section class="screen">
+				<div class="center_block">
+					<img src="{{src}}">
+				</div>
+			</section>
+		{{/with}}
+
+		{{#each about}}
+			<section class="screen half {{color}}">
+				<div class="center_block">
+					<p>{{text}}</p>
+				</div>
+			</section>
+		{{/each}}
+
+{{>footer}}

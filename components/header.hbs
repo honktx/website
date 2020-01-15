@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HONK!TX Festival of Community Street Bands (beta)</title>
+		<link rel="stylesheet" href="/assets/css/main.css">
+        <link rel='stylesheet' id='charity-fonts-css'  href='//fonts.googleapis.com/css?family=Lato%3A100%2C300%2C400%2C700%2C900%2C100italic%2C300italic%2C400italic%2C700italic%2C900italic&#038;ver=2015-09-07' type='text/css' media='all' />
+		<style type="text/css"></style>
+	</head>
+	<body>
+        <div class="top-banner">
+            <div class="socials">
+                {{#each global.social}}
+                <a href="{{url}}" target="_blank" class="social" title="{{name}}"><i class="{{icon_class}}"></i></a>
+                {{/each}}
+                <a href="{{global.donate.url}}" target="_blank" title="Donate to HONK!TX" class="donate">Donate</a>
+            </div>
+            <div class="links">
+                <div class="content">
+                    <div class="image"><img src="/assets/img/HONKTX-logo.png"></div>
+                    {{#each global.pages}}
+                    <a class="page-link" href="{{url}}" {{#if target}}target='{{target}}'{{/if}}>{{label}}</a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>

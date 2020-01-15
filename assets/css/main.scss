@@ -1,0 +1,156 @@
+@import 'variables/*';
+@import 'vendor/fontawesome-5.12.0/fontawesome.scss';
+@import 'vendor/fontawesome-5.12.0/brands.scss';
+@import 'vendor/fontawesome-5.12.0/solid.scss';
+
+body {
+	background-color: $white;
+	color:$black;
+	font-family: 'Lato', sans-serif;
+	// font-family: Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+body, body * { box-sizing: border-box; }
+
+.center_block {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.bottom_block {
+	text-align: center;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.bgblue {
+	background-color: $bgblue;
+	color: $white;
+}
+
+.screen {
+	height: 100vh;
+	position: relative;
+	background-color: $white;
+
+	&.half {
+		height: 50vh;
+	}
+}
+
+.top-banner { 
+	.socials {
+		@include bounded;
+
+		display: flex;
+		justify-content: flex-end;
+
+		& > * {
+			height:40px; min-width:50px;
+			align-items: center;
+			justify-content: center;
+			display: inline-flex;
+			text-decoration: none;
+		}
+
+		.social {
+			color: $gray;
+			font-size: 18px;
+			border-left: solid 1px $hovergray;
+			transition: background .3s ease-out;
+		}
+		.social:hover {
+			background-color: $hovergray;
+		}
+
+		.donate {
+			background-color:$red;
+			color:$white;
+			text-transform: uppercase;
+			padding:0 40px;
+			margin-right:12px;
+			font-size: 14px;
+			font-weight:bold;
+		}
+	}
+
+	.links {
+		background: url('/assets/img/Sunburst.png') 50% 50% no-repeat;
+
+		.content {
+			@include bounded;
+			
+			height: 100px; padding:0 15px;
+			display: flex; align-items: center;
+
+			.image { flex: 1; margin-right: 30px; }
+			.image > img { max-width:100%; }
+
+			.page-link {
+				color: $black; 
+				text-decoration: none;
+				text-transform: uppercase;
+				padding:0 15px;
+				font-weight: bold;
+				font-size:13px;
+				transition: color 0.3s ease-in;
+			}
+			.page-link:hover { color: $red; }
+		}
+	}
+}
+
+.honk-footer {
+	.content {
+		@include bounded;
+
+		display:flex;
+
+		& > * { flex: 1; }
+	}
+}
+
+// animations
+.vertical_pulsate {
+	animation: vertical_pulsate 3s infinite;
+}
+
+@keyframes vertical_pulsate {
+	0% { transform: translate(-50%, 0px); }
+	80% { transform: translate(-50%, 0px); }
+	85% { transform: translate(-50%, 10px); }
+	90% { transform: translate(-50%, 0px); }
+	95% { transform: translate(-50%, 10px); }
+	100% { transform: translate(-50%, 0px); }
+}
+
+// typography
+p {
+	font-size: 20px;
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+
+a {
+	color: $black;
+}
+
+.huge {
+	font-size: 75px;
+	font-weight: 100;
+}
+
+// lists
+ul {
+	text-align: left;
+}
+
+li {
+	list-style-type: none;
+}
