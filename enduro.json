@@ -1,4 +1,5 @@
 {
-	"project_name": "enduro_intro",
-	"project_slug": "ei"
+	"project_name": "honktx_webste",
+	"project_slug": "ei",
+	"port": 5010
 }
